@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		79237C0C1FA57A3900498145 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79237C0B1FA57A3900498145 /* AppDelegate.m */; };
+		79237C0F1FA57A3900498145 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79237C0E1FA57A3900498145 /* ViewController.m */; };
+		79237C121FA57A3900498145 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79237C101FA57A3900498145 /* Main.storyboard */; };
+		79237C141FA57A3900498145 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79237C131FA57A3900498145 /* Assets.xcassets */; };
+		79237C171FA57A3900498145 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79237C151FA57A3900498145 /* LaunchScreen.storyboard */; };
+		79237C1A1FA57A3900498145 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79237C191FA57A3900498145 /* main.m */; };
+		79237C241FA57A3900498145 /* LearnOpenglesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79237C231FA57A3900498145 /* LearnOpenglesTests.m */; };
+		79237C2F1FA57A3900498145 /* LearnOpenglesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79237C2E1FA57A3900498145 /* LearnOpenglesUITests.m */; };
+		79237C3E1FA57D2200498145 /* SessionOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79237C3D1FA57D2200498145 /* SessionOneViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		79237C201FA57A3900498145 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79237BFF1FA57A3900498145 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79237C061FA57A3900498145;
+			remoteInfo = LearnOpengles;
+		};
+		79237C2B1FA57A3900498145 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79237BFF1FA57A3900498145 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79237C061FA57A3900498145;
+			remoteInfo = LearnOpengles;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		79237C071FA57A3900498145 /* LearnOpengles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnOpengles.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79237C0A1FA57A3900498145 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		79237C0B1FA57A3900498145 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		79237C0D1FA57A3900498145 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		79237C0E1FA57A3900498145 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		79237C111FA57A3900498145 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		79237C131FA57A3900498145 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		79237C161FA57A3900498145 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		79237C181FA57A3900498145 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79237C191FA57A3900498145 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		79237C1F1FA57A3900498145 /* LearnOpenglesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnOpenglesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79237C231FA57A3900498145 /* LearnOpenglesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearnOpenglesTests.m; sourceTree = "<group>"; };
+		79237C251FA57A3900498145 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79237C2A1FA57A3900498145 /* LearnOpenglesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnOpenglesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79237C2E1FA57A3900498145 /* LearnOpenglesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearnOpenglesUITests.m; sourceTree = "<group>"; };
+		79237C301FA57A3900498145 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79237C3C1FA57D2200498145 /* SessionOneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SessionOneViewController.h; path = session/SessionOneViewController.h; sourceTree = "<group>"; };
+		79237C3D1FA57D2200498145 /* SessionOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SessionOneViewController.m; path = session/SessionOneViewController.m; sourceTree = "<group>"; };
+		79237C401FA581CC00498145 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		79237C041FA57A3900498145 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79237C1C1FA57A3900498145 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79237C271FA57A3900498145 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		79237BFE1FA57A3900498145 = {
+			isa = PBXGroup;
+			children = (
+				79237C091FA57A3900498145 /* LearnOpengles */,
+				79237C221FA57A3900498145 /* LearnOpenglesTests */,
+				79237C2D1FA57A3900498145 /* LearnOpenglesUITests */,
+				79237C081FA57A3900498145 /* Products */,
+				79237C3F1FA581CC00498145 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		79237C081FA57A3900498145 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79237C071FA57A3900498145 /* LearnOpengles.app */,
+				79237C1F1FA57A3900498145 /* LearnOpenglesTests.xctest */,
+				79237C2A1FA57A3900498145 /* LearnOpenglesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79237C091FA57A3900498145 /* LearnOpengles */ = {
+			isa = PBXGroup;
+			children = (
+				79237C0A1FA57A3900498145 /* AppDelegate.h */,
+				79237C0B1FA57A3900498145 /* AppDelegate.m */,
+				79237C0D1FA57A3900498145 /* ViewController.h */,
+				79237C0E1FA57A3900498145 /* ViewController.m */,
+				79237C3C1FA57D2200498145 /* SessionOneViewController.h */,
+				79237C3D1FA57D2200498145 /* SessionOneViewController.m */,
+				79237C101FA57A3900498145 /* Main.storyboard */,
+				79237C131FA57A3900498145 /* Assets.xcassets */,
+				79237C151FA57A3900498145 /* LaunchScreen.storyboard */,
+				79237C181FA57A3900498145 /* Info.plist */,
+				79237C191FA57A3900498145 /* main.m */,
+			);
+			path = LearnOpengles;
+			sourceTree = "<group>";
+		};
+		79237C221FA57A3900498145 /* LearnOpenglesTests */ = {
+			isa = PBXGroup;
+			children = (
+				79237C231FA57A3900498145 /* LearnOpenglesTests.m */,
+				79237C251FA57A3900498145 /* Info.plist */,
+			);
+			path = LearnOpenglesTests;
+			sourceTree = "<group>";
+		};
+		79237C2D1FA57A3900498145 /* LearnOpenglesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				79237C2E1FA57A3900498145 /* LearnOpenglesUITests.m */,
+				79237C301FA57A3900498145 /* Info.plist */,
+			);
+			path = LearnOpenglesUITests;
+			sourceTree = "<group>";
+		};
+		79237C3F1FA581CC00498145 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79237C401FA581CC00498145 /* GLKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		79237C061FA57A3900498145 /* LearnOpengles */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79237C331FA57A3900498145 /* Build configuration list for PBXNativeTarget "LearnOpengles" */;
+			buildPhases = (
+				79237C031FA57A3900498145 /* Sources */,
+				79237C041FA57A3900498145 /* Frameworks */,
+				79237C051FA57A3900498145 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LearnOpengles;
+			productName = LearnOpengles;
+			productReference = 79237C071FA57A3900498145 /* LearnOpengles.app */;
+			productType = "com.apple.product-type.application";
+		};
+		79237C1E1FA57A3900498145 /* LearnOpenglesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79237C361FA57A3900498145 /* Build configuration list for PBXNativeTarget "LearnOpenglesTests" */;
+			buildPhases = (
+				79237C1B1FA57A3900498145 /* Sources */,
+				79237C1C1FA57A3900498145 /* Frameworks */,
+				79237C1D1FA57A3900498145 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79237C211FA57A3900498145 /* PBXTargetDependency */,
+			);
+			name = LearnOpenglesTests;
+			productName = LearnOpenglesTests;
+			productReference = 79237C1F1FA57A3900498145 /* LearnOpenglesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		79237C291FA57A3900498145 /* LearnOpenglesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79237C391FA57A3900498145 /* Build configuration list for PBXNativeTarget "LearnOpenglesUITests" */;
+			buildPhases = (
+				79237C261FA57A3900498145 /* Sources */,
+				79237C271FA57A3900498145 /* Frameworks */,
+				79237C281FA57A3900498145 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79237C2C1FA57A3900498145 /* PBXTargetDependency */,
+			);
+			name = LearnOpenglesUITests;
+			productName = LearnOpenglesUITests;
+			productReference = 79237C2A1FA57A3900498145 /* LearnOpenglesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		79237BFF1FA57A3900498145 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = gaojian;
+				TargetAttributes = {
+					79237C061FA57A3900498145 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+					79237C1E1FA57A3900498145 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 79237C061FA57A3900498145;
+					};
+					79237C291FA57A3900498145 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 79237C061FA57A3900498145;
+					};
+				};
+			};
+			buildConfigurationList = 79237C021FA57A3900498145 /* Build configuration list for PBXProject "LearnOpengles" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 79237BFE1FA57A3900498145;
+			productRefGroup = 79237C081FA57A3900498145 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				79237C061FA57A3900498145 /* LearnOpengles */,
+				79237C1E1FA57A3900498145 /* LearnOpenglesTests */,
+				79237C291FA57A3900498145 /* LearnOpenglesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79237C051FA57A3900498145 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79237C171FA57A3900498145 /* LaunchScreen.storyboard in Resources */,
+				79237C141FA57A3900498145 /* Assets.xcassets in Resources */,
+				79237C121FA57A3900498145 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79237C1D1FA57A3900498145 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79237C281FA57A3900498145 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79237C031FA57A3900498145 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79237C0F1FA57A3900498145 /* ViewController.m in Sources */,
+				79237C1A1FA57A3900498145 /* main.m in Sources */,
+				79237C3E1FA57D2200498145 /* SessionOneViewController.m in Sources */,
+				79237C0C1FA57A3900498145 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79237C1B1FA57A3900498145 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79237C241FA57A3900498145 /* LearnOpenglesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79237C261FA57A3900498145 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79237C2F1FA57A3900498145 /* LearnOpenglesUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79237C211FA57A3900498145 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79237C061FA57A3900498145 /* LearnOpengles */;
+			targetProxy = 79237C201FA57A3900498145 /* PBXContainerItemProxy */;
+		};
+		79237C2C1FA57A3900498145 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79237C061FA57A3900498145 /* LearnOpengles */;
+			targetProxy = 79237C2B1FA57A3900498145 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		79237C101FA57A3900498145 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79237C111FA57A3900498145 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		79237C151FA57A3900498145 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79237C161FA57A3900498145 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		79237C311FA57A3900498145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		79237C321FA57A3900498145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		79237C341FA57A3900498145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 582UG67KR9;
+				INFOPLIST_FILE = LearnOpengles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gj.LearnOpengles;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		79237C351FA57A3900498145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 582UG67KR9;
+				INFOPLIST_FILE = LearnOpengles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gj.LearnOpengles;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		79237C371FA57A3900498145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 582UG67KR9;
+				INFOPLIST_FILE = LearnOpenglesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gj.LearnOpenglesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LearnOpengles.app/LearnOpengles";
+			};
+			name = Debug;
+		};
+		79237C381FA57A3900498145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 582UG67KR9;
+				INFOPLIST_FILE = LearnOpenglesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gj.LearnOpenglesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LearnOpengles.app/LearnOpengles";
+			};
+			name = Release;
+		};
+		79237C3A1FA57A3900498145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 582UG67KR9;
+				INFOPLIST_FILE = LearnOpenglesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gj.LearnOpenglesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LearnOpengles;
+			};
+			name = Debug;
+		};
+		79237C3B1FA57A3900498145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 582UG67KR9;
+				INFOPLIST_FILE = LearnOpenglesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gj.LearnOpenglesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LearnOpengles;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		79237C021FA57A3900498145 /* Build configuration list for PBXProject "LearnOpengles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79237C311FA57A3900498145 /* Debug */,
+				79237C321FA57A3900498145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79237C331FA57A3900498145 /* Build configuration list for PBXNativeTarget "LearnOpengles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79237C341FA57A3900498145 /* Debug */,
+				79237C351FA57A3900498145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79237C361FA57A3900498145 /* Build configuration list for PBXNativeTarget "LearnOpenglesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79237C371FA57A3900498145 /* Debug */,
+				79237C381FA57A3900498145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79237C391FA57A3900498145 /* Build configuration list for PBXNativeTarget "LearnOpenglesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79237C3A1FA57A3900498145 /* Debug */,
+				79237C3B1FA57A3900498145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 79237BFF1FA57A3900498145 /* Project object */;
+}
