@@ -16,6 +16,8 @@
 		79237C241FA57A3900498145 /* LearnOpenglesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79237C231FA57A3900498145 /* LearnOpenglesTests.m */; };
 		79237C2F1FA57A3900498145 /* LearnOpenglesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79237C2E1FA57A3900498145 /* LearnOpenglesUITests.m */; };
 		79237C3E1FA57D2200498145 /* SessionOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79237C3D1FA57D2200498145 /* SessionOneViewController.m */; };
+		79CD53A71FAA14E000A81CF9 /* fragmentShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 79CD53A51FAA14DF00A81CF9 /* fragmentShader.fsh */; };
+		79CD53A81FAA14E000A81CF9 /* vertexShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 79CD53A61FAA14DF00A81CF9 /* vertexShader.vsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		79237C3C1FA57D2200498145 /* SessionOneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SessionOneViewController.h; path = session/SessionOneViewController.h; sourceTree = "<group>"; };
 		79237C3D1FA57D2200498145 /* SessionOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SessionOneViewController.m; path = session/SessionOneViewController.m; sourceTree = "<group>"; };
 		79237C401FA581CC00498145 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		79CD53A51FAA14DF00A81CF9 /* fragmentShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fragmentShader.fsh; sourceTree = "<group>"; };
+		79CD53A61FAA14DF00A81CF9 /* vertexShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = vertexShader.vsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				79237C0E1FA57A3900498145 /* ViewController.m */,
 				79237C3C1FA57D2200498145 /* SessionOneViewController.h */,
 				79237C3D1FA57D2200498145 /* SessionOneViewController.m */,
+				79CD53A51FAA14DF00A81CF9 /* fragmentShader.fsh */,
+				79CD53A61FAA14DF00A81CF9 /* vertexShader.vsh */,
 				79237C101FA57A3900498145 /* Main.storyboard */,
 				79237C131FA57A3900498145 /* Assets.xcassets */,
 				79237C151FA57A3900498145 /* LaunchScreen.storyboard */,
@@ -253,7 +259,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79CD53A71FAA14E000A81CF9 /* fragmentShader.fsh in Resources */,
 				79237C171FA57A3900498145 /* LaunchScreen.storyboard in Resources */,
+				79CD53A81FAA14E000A81CF9 /* vertexShader.vsh in Resources */,
 				79237C141FA57A3900498145 /* Assets.xcassets in Resources */,
 				79237C121FA57A3900498145 /* Main.storyboard in Resources */,
 			);
