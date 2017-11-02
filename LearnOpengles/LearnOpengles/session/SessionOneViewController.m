@@ -7,13 +7,15 @@
 //
 
 #import "SessionOneViewController.h"
+#import <OpenGLES/ES3/gl.h>
 
 @interface SessionOneViewController () {
     
     GLuint _program;
     BOOL _isNormal;
     BOOL _needChange;
-    GLuint _bufferHandles[3];
+    GLuint _bufferHandles[5];
+    GLuint _vertexArray[2];
 }
 
 @property (strong, nonatomic) EAGLContext *context;
@@ -42,12 +44,83 @@
     
     glClearColor(1.0f, 1.0f, 1.0f, 0.0f);
     
-    glUseProgram(_program);
-
-    _bufferHandles[0] = 0;
-    _bufferHandles[1] = 0;
-    _bufferHandles[2] = 0;
     
+    GLfloat vertex[3 * (3 + 4)] = {
+        0.0,  0.5,  0.0,
+        0.0, 0.0, 1.0, 1.0,
+        -0.5, -0.5, 0.0,
+        0.0, 0.0, 1.0, 1.0,
+        0.5,  -0.5, 0.0,
+        0.0, 0.0, 1.0, 1.0,
+    };
+    
+//    GLfloat color[3 * 4] = {
+//        0.0, 0.0, 1.0, 1.0,
+//        0.0, 0.0, 1.0, 1.0,
+//        0.0, 0.0, 1.0, 1.0
+//    };
+    
+    GLfloat vertex1[3 * (3 + 4)] = {
+        0.0,  -0.5,  0.0,
+        1.0, 0.0, 0.0, 1.0,
+        -0.5, 0.5, 0.0,
+        1.0, 0.0, 0.0, 1.0,
+        0.5,  0.5, 0.0,
+        1.0, 0.0, 0.0, 1.0,
+    };
+    
+//    GLfloat color1[3 * 4] = {
+//        1.0, 0.0, 0.0, 1.0,
+//        1.0, 0.0, 0.0, 1.0,
+//        1.0, 0.0, 0.0, 1.0
+//    };
+    
+    glUseProgram(_program);
+    
+    glGenBuffers(3, _bufferHandles);
+    
+    glBindBuffer(GL_ARRAY_BUFFER, _bufferHandles[0]);
+    glBufferData(GL_ARRAY_BUFFER, 3*(3 + 4)*sizeof(GLfloat), vertex, GL_STATIC_DRAW);
+    
+    glBindBuffer(GL_ARRAY_BUFFER, _bufferHandles[1]);
+    glBufferData(GL_ARRAY_BUFFER, 3*(3 + 4)*sizeof(GLfloat), vertex1, GL_STATIC_DRAW);
+    
+    GLushort indexs[] = {0, 1, 2};
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _bufferHandles[2]);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, 3*sizeof(GLushort), indexs, GL_STATIC_DRAW);
+    
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+    
+    glGenVertexArrays(2, _vertexArray);
+    
+    glBindVertexArray(_vertexArray[0]);
+    
+    glEnableVertexAttribArray(0);
+    glEnableVertexAttribArray(1);
+    
+    glBindBuffer(GL_ARRAY_BUFFER, _bufferHandles[0]);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _bufferHandles[2]);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, (3 + 4)*sizeof(GLfloat), 0);
+    glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, (3 + 4)*sizeof(GLfloat), (const void *)(3*sizeof(GLfloat)));
+    
+    glBindVertexArray(_vertexArray[1]);
+    
+    glEnableVertexAttribArray(0);
+    glEnableVertexAttribArray(1);
+    
+    glBindBuffer(GL_ARRAY_BUFFER, _bufferHandles[1]);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _bufferHandles[2]);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, (3 + 4)*sizeof(GLfloat), 0);
+    glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, (3 + 4)*sizeof(GLfloat), (const void *)(3*sizeof(GLfloat)));
+    
+    glBindVertexArray(0);
+    
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+    
+    glDisableVertexAttribArray(0);
+    glDisableVertexAttribArray(1);
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
@@ -56,89 +129,9 @@
     
     glUseProgram(_program);
     
-    if (0 == _bufferHandles[0]) {
-        
-        GLfloat vertexPos[3 * 3] = {
-            0.0,  0.5,  0.0,
-            -0.5, -0.5, 0.0,
-            0.5,  -0.5, 0.0,
-        };
-        
-        GLfloat color[3 * 4] = {
-            0.0, 0.0, 1.0, 1.0,
-            0.0, 0.0, 1.0, 1.0,
-            0.0, 0.0, 1.0, 1.0
-        };
-
-        glGenBuffers(3, _bufferHandles);
-
-        glBindBuffer(GL_ARRAY_BUFFER, _bufferHandles[0]);
-        glBufferData(GL_ARRAY_BUFFER, 3*3*sizeof(GLfloat), vertexPos, GL_STATIC_DRAW);
-
-        glBindBuffer(GL_ARRAY_BUFFER, _bufferHandles[1]);
-        glBufferData(GL_ARRAY_BUFFER, 3*4*sizeof(GLfloat), color, GL_STATIC_DRAW);
-
-        GLushort indexs[] = {0, 1, 2};
-
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _bufferHandles[2]);
-        glBufferData(GL_ELEMENT_ARRAY_BUFFER, 3*sizeof(GLushort), indexs, GL_STATIC_DRAW);
-
-        glBindBuffer(GL_ARRAY_BUFFER, 0);
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-    }
-    
-    if (_needChange) {
-        
-        _needChange = NO;
-        GLfloat vertexPos[3 * 3] = {
-            0.0,  0.5,  0.0,
-            -0.5, -0.5, 0.0,
-            0.5,  -0.5, 0.0,
-        };
-        
-        GLfloat color[3 * 4] = {
-            0.0, 0.0, 1.0, 1.0,
-            0.0, 0.0, 1.0, 1.0,
-            0.0, 0.0, 1.0, 1.0
-        };
-        GLfloat vertexPos1[3 * 3] = {
-            0.0,  -0.5,  0.0,
-            -0.5, 0.5, 0.0,
-            0.5,  0.5, 0.0,
-        };
-        
-        GLfloat color1[3 * 4] = {
-            1.0, 0.0, 0.0, 1.0,
-            1.0, 0.0, 0.0, 1.0,
-            1.0, 0.0, 0.0, 1.0
-        };
-        
-        glBindBuffer(GL_ARRAY_BUFFER, _bufferHandles[0]);
-        glBufferData(GL_ARRAY_BUFFER, 3*3*sizeof(GLfloat), _isNormal ? vertexPos : vertexPos1, GL_STATIC_DRAW);
-        
-        glBindBuffer(GL_ARRAY_BUFFER, _bufferHandles[1]);
-        glBufferData(GL_ARRAY_BUFFER, 3*4*sizeof(GLfloat), _isNormal ? color : color1, GL_STATIC_DRAW);
-        
-        glBindBuffer(GL_ARRAY_BUFFER, 0);
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-    }
-    
-    glBindBuffer(GL_ARRAY_BUFFER, _bufferHandles[0]);
-    glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3*sizeof(GLfloat), 0);
-    
-    glBindBuffer(GL_ARRAY_BUFFER, _bufferHandles[1]);
-    glEnableVertexAttribArray(1);
-    glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, 4*sizeof(GLfloat), 0);
-    
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _bufferHandles[2]);
+    glBindVertexArray(_isNormal ? _vertexArray[0] : _vertexArray[1]);
     glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_SHORT, 0);
-    
-    glDisableVertexAttribArray(0);
-    glDisableVertexAttribArray(1);
-    
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
 }
 
 - (GLint)createProgram:(NSString *)vertexName fragment:(NSString *)fragmentName {
