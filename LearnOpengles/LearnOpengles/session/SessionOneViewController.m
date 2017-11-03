@@ -8,6 +8,7 @@
 
 #import "SessionOneViewController.h"
 #import <OpenGLES/ES3/gl.h>
+#import "CompileUtility.h"
 
 @interface SessionOneViewController () {
     
@@ -38,12 +39,20 @@
     
     [EAGLContext setCurrentContext:self.context];
     
-    _isNormal = YES;
+    GLint result = [CompileUtility createProgram:@"vertexShader.vsh" fragment:@"fragmentShader.fsh"];
+    if (result < 0) {
+        return;
+    }
+    _program = result;
     
-    _program = [self createProgram:@"vertexShader.vsh" fragment:@"fragmentShader.fsh"];
+    [self dataSetup];
+}
+
+- (void)dataSetup {
     
     glClearColor(1.0f, 1.0f, 1.0f, 0.0f);
     
+    _isNormal = YES;
     
     GLfloat vertex[3 * (3 + 4)] = {
         0.0,  0.5,  0.0,
@@ -54,12 +63,6 @@
         0.0, 0.0, 1.0, 1.0,
     };
     
-//    GLfloat color[3 * 4] = {
-//        0.0, 0.0, 1.0, 1.0,
-//        0.0, 0.0, 1.0, 1.0,
-//        0.0, 0.0, 1.0, 1.0
-//    };
-    
     GLfloat vertex1[3 * (3 + 4)] = {
         0.0,  -0.5,  0.0,
         1.0, 0.0, 0.0, 1.0,
@@ -68,12 +71,6 @@
         0.5,  0.5, 0.0,
         1.0, 0.0, 0.0, 1.0,
     };
-    
-//    GLfloat color1[3 * 4] = {
-//        1.0, 0.0, 0.0, 1.0,
-//        1.0, 0.0, 0.0, 1.0,
-//        1.0, 0.0, 0.0, 1.0
-//    };
     
     glUseProgram(_program);
     
@@ -132,87 +129,6 @@
     glBindVertexArray(_isNormal ? _vertexArray[0] : _vertexArray[1]);
     glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_SHORT, 0);
     glBindVertexArray(0);
-}
-
-- (GLint)createProgram:(NSString *)vertexName fragment:(NSString *)fragmentName {
-    
-    GLint vertexShader = [self compileShader:vertexName type:GL_VERTEX_SHADER];
-    GLint fragmentShader = [self compileShader:fragmentName type:GL_FRAGMENT_SHADER];
-    if (vertexShader < 0 || fragmentShader < 0) {
-        
-        NSLog(@"create shader failed");
-        return -1;
-    }
-    
-    GLuint programHandle = glCreateProgram();
-    if (GL_FALSE == programHandle) {
-        
-        NSLog(@"create program failed");
-        return -1;
-    }
-    
-    glAttachShader(programHandle, vertexShader);
-    glAttachShader(programHandle, fragmentShader);
-    glLinkProgram(programHandle);
-    
-    GLint linkStatus = 0;
-    glGetProgramiv(programHandle, GL_LINK_STATUS, &linkStatus);
-    if (GL_FALSE == linkStatus) {
-        
-        GLint infoLength = 0;
-        glGetProgramiv(programHandle, GL_INFO_LOG_LENGTH, &infoLength);
-        
-        GLsizei buffsize = infoLength;
-        GLsizei length = 0;
-        GLchar *info = malloc(sizeof(char) * infoLength);;
-        glGetProgramInfoLog(programHandle, buffsize, &length, info);
-        NSLog(@"link error : %s", info);
-        free(info);
-    }
-    
-    return programHandle;
-}
-
-- (GLint)compileShader:(NSString *)shaderName type:(GLenum)type {
-    
-    NSString *pathString = [[NSBundle mainBundle] pathForResource:shaderName ofType:nil];
-    NSError *error = nil;
-    NSString *shaderCode = [NSString stringWithContentsOfFile:pathString encoding:NSUTF8StringEncoding error:&error];
-    if (error) {
-        
-        NSLog(@"load shader code failed : %@", error);
-        return -1;
-    }
-    
-    GLuint shaderHandle = glCreateShader(type);
-    if (GL_FALSE == shaderHandle) {
-        
-        NSLog(@"create shader failed");
-        return  -1;
-    }
-    
-    const GLchar *code = shaderCode.UTF8String;
-    GLint codeLenght = (GLint)(shaderCode.length);
-    glShaderSource(shaderHandle, 1, &code, &codeLenght);
-    
-    glCompileShader(shaderHandle);
-    
-    GLint compileStatus = 0;
-    glGetShaderiv(shaderHandle, GL_COMPILE_STATUS, &compileStatus);
-    if (GL_FALSE == compileStatus) {
-        
-        GLint infoLength = 0;
-        glGetShaderiv(shaderHandle, GL_INFO_LOG_LENGTH, &infoLength);
-        
-        GLsizei buffsize = infoLength;
-        GLsizei length = 0;
-        GLchar *info = malloc(sizeof(char) * infoLength);;
-        glGetShaderInfoLog(shaderHandle, buffsize, &length, info);
-        NSLog(@"compile error : %s", info);
-        free(info);
-    }
-    
-    return shaderHandle;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
